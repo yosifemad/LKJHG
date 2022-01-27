@@ -34,7 +34,7 @@ end
 else
 print('\27[1;34mلم يتم حفظ التوكن جرب مره اخره \nToken not saved, try again')
 end 
-os.execute('lua SAKURA.lua')
+os.execute('lua LKJHG.lua')
 end
 if not Redis:get(SshId.."Info:Redis:User") then
 io.write('\27[1;31mارسل معرف المطور الاساسي الان \nDeveloper UserName saved ↡\n\27[0;39;49m')
@@ -45,7 +45,7 @@ Redis:set(SshId.."Info:Redis:User",UserSudo)
 else
 print('\n\27[1;34mلم يتم حفظ معرف المطور الاساسي \nDeveloper UserName not saved\n')
 end 
-os.execute('lua SAKURA.lua')
+os.execute('lua LKJHG.lua')
 end
 if not Redis:get(SshId.."Info:Redis:User:ID") then
 io.write('\27[1;31mارسل ايدي المطور الاساسي الان \nDeveloper ID saved ↡\n\27[0;39;49m')
@@ -56,7 +56,7 @@ Redis:set(SshId.."Info:Redis:User:ID",UserId)
 else
 print('\n\27[1;34mلم يتم حفظ ايدي المطور الاساسي \nDeveloper ID not saved\n')
 end 
-os.execute('lua SAKURA.lua')
+os.execute('lua LKJHG.lua')
 end
 print('&&&&&')
 local Informationlua = io.open("Information.lua", 'w')
@@ -73,7 +73,7 @@ local LKJHG = io.open("LKJHG", 'w')
 LKJHG:write([[
 cd $(cd $(dirname $0); pwd)
 while(true) do
-sudo lua5.3 SAKURA.lua
+sudo lua5.3 LKJHG.lua
 done
 ]])
 LKJHG:close()
@@ -690,7 +690,7 @@ LuaTele.editMessageText(ChatId,MsgId,"⌔︙ صلاحيات المجموعه - "
 end
 function Statusrestricted(ChatId,UserId)
 return{
-KtmAll = Redis:sismember(LKJHG.."SAKURA:KtmAll:Groups",UserId) ,
+KtmAll = Redis:sismember(LKJHG.."LKJHG:KtmAll:Groups",UserId) ,
 BanAll = Redis:sismember(LKJHG.."LKJHG:BanAll:Groups",UserId) ,
 BanGroup = Redis:sismember(LKJHG.."LKJHG:BanGroup:Group"..ChatId,UserId) ,
 SilentGroup = Redis:sismember(LKJHG.."LKJHG:SilentGroup:Group"..ChatId,UserId)
@@ -1486,12 +1486,12 @@ Redis:del(LKJHG.."LKJHG:Set:Link"..msg_chat_id..""..msg.sender.user_id)
 return LuaTele.sendText(msg_chat_id,msg_id,"📥︙تم حفظ الرابط بنجاح","md",true)         
 end
 end 
-if Redis:get(LKJHG.."SAKURA:Welcome:Group" .. msg_chat_id .. "" .. msg.sender.user_id) then 
+if Redis:get(LKJHG.."LKJHG:Welcome:Group" .. msg_chat_id .. "" .. msg.sender.user_id) then 
 if text == "الغاء" then 
-Redis:del(LKJHG.."SAKURA:Welcome:Group" .. msg_chat_id .. "" .. msg.sender.user_id)  
+Redis:del(LKJHG.."LKJHG:Welcome:Group" .. msg_chat_id .. "" .. msg.sender.user_id)  
 return LuaTele.sendText(msg_chat_id,msg_id,"⌔︙تم الغاء حفظ الترحيب","md",true)   
 end 
-Redis:del(LKJHG.."SAKURA:Welcome:Group" .. msg_chat_id .. "" .. msg.sender.user_id)  
+Redis:del(LKJHG.."LKJHG:Welcome:Group" .. msg_chat_id .. "" .. msg.sender.user_id)  
 Redis:set(LKJHG.."LKJHG:Welcome:Group"..msg_chat_id,text) 
 return LuaTele.sendText(msg_chat_id,msg_id,"⌔︙تم حفظ ترحيب المجموعه","md",true)     
 end
@@ -2315,7 +2315,7 @@ if text == 'تحديث السورس' or text == 'تحديث السورس ⌔' th
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⌔︙هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
---os.execute('rm -rf SAKURA.lua')
+--os.execute('rm -rf LKJHG.lua')
 --download('https://raw.githubusercontent.com/RiotXGear/LKJHG/master/LKJHG.lua','LKJHG.lua')
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⌔︙تم تحديث السورس * ',"md",true)  
 end
@@ -3380,7 +3380,7 @@ if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⌔︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '⌯ 𝙍??𝙎𝙄𝙀 ˹🐉˼', url = 't.me/SAKURAV15'}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '⌯ 𝙍??𝙎𝙄𝙀 ˹🐉˼', url = 't.me/VVCC7'}, },}}
 return LuaTele.sendText(msg.chat_id,msg.id,'*\n⌔︙عذࢪا عليڪ الاشتࢪاڪ في قناه البوت \n⌔︙اشتࢪڪ هنا عمࢪي*',"md",false, false, false, false, reply_markup)
 end
 if not msg.Originators and not Redis:get(LKJHG.."LKJHG:Status:SetId"..msg_chat_id) then
@@ -3655,12 +3655,12 @@ end
 end
 end
 if msg.content.video_note or msg.content.document or msg.content.audio or msg.content.video or msg.content.voice_note or msg.content.sticker or msg.content.animation or msg.content.photo then      
-Redis:sadd(LKJHG.."SAKURA:allM"..msg.chat_id, msg.id)
-if Redis:get(LKJHG.."SAKURA:Status:Del:Media"..msg.chat_id) then    
-local Numbardel = Redis:get(LKJHG.."SAKURA:allM:numdel"..msg.chat_id) or 200
-local gmedia = Redis:scard(LKJHG.."SAKURA:allM"..msg.chat_id)  
+Redis:sadd(LKJHG.."LKJHG:allM"..msg.chat_id, msg.id)
+if Redis:get(LKJHG.."LKJHG:Status:Del:Media"..msg.chat_id) then    
+local Numbardel = Redis:get(LKJHG.."LKJHG:allM:numdel"..msg.chat_id) or 200
+local gmedia = Redis:scard(LKJHG.."LKJHG:allM"..msg.chat_id)  
 if tonumber(gmedia) >= tonumber(Numbardel) then
-local liste = Redis:smembers(LKJHG.."SAKURA:allM"..msg.chat_id)
+local liste = Redis:smembers(LKJHG.."LKJHG:allM"..msg.chat_id)
 for k,v in pairs(liste) do
 local Mesge = v
 if Mesge then
@@ -3669,7 +3669,7 @@ LuaTele.deleteMessages(msg.chat_id,{[1]= Mesge})
 end
 end
 LuaTele.sendText(msg_chat_id,msg_id, t)
-Redis:del(LKJHG.."SAKURA:allM"..msg.chat_id)
+Redis:del(LKJHG.."LKJHG:allM"..msg.chat_id)
 end
 end
 end
@@ -3678,7 +3678,7 @@ if not msg.Originators then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⌔︙هذا الامر يخص { '..Controller_Num(5)..' }* ',"md",true)  
 end
 local Numbardel = text:match("^ضع عدد المسح (%d+)$")
-Redis:set(LKJHG.."SAKURA:allM:numdel"..msg.chat_id,Numbardel) 
+Redis:set(LKJHG.."LKJHG:allM:numdel"..msg.chat_id,Numbardel) 
 LuaTele.sendText(msg_chat_id,msg_id, 'تم تعيين العدد  الى : '..Numbardel)
 end
 if text == ("امسح") then
@@ -3686,13 +3686,13 @@ if text == ("امسح") then
 if not msg.Managers then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⌔︙هذا الامر يخص { '..Controller_Num(6)..' }* ',"md",true)  
 end
-local list = Redis:smembers(LKJHG.."SAKURA:allM"..msg.chat_id)
+local list = Redis:smembers(LKJHG.."LKJHG:allM"..msg.chat_id)
 for k,v in pairs(list) do
 local Message = v
 if Message then
 t = "⌔︙تم مسح "..k.." من الوسائط الموجوده"
 LuaTele.deleteMessages(msg.chat_id,{[1]= Message})
-Redis:del(LKJHG.."SAKURA:allM"..msg.chat_id)
+Redis:del(LKJHG.."LKJHG:allM"..msg.chat_id)
 end
 end
 if #list == 0 then
@@ -3705,7 +3705,7 @@ if text == ("الميديا") then
 if not msg.Managers then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⌔︙هذا الامر يخص { '..Controller_Num(6)..' }* ',"md",true)  
 end
-local gmria = Redis:scard(LKJHG.."SAKURA:allM"..msg.chat_id)  
+local gmria = Redis:scard(LKJHG.."LKJHG:allM"..msg.chat_id)  
  LuaTele.sendText(msg_chat_id,msg_id,"⌔︙عدد الميديا الموجود هو (* "..gmria.." *)","md")
 end
 if text == "تعطيل المسح التلقائي" then
@@ -3713,7 +3713,7 @@ if text == "تعطيل المسح التلقائي" then
 if not msg.Originators then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⌔︙هذا الامر يخص { '..Controller_Num(5)..' }* ',"md",true)  
 end
-Redis:del(LKJHG.."SAKURA:Status:Del:Media"..msg.chat_id)
+Redis:del(LKJHG.."LKJHG:Status:Del:Media"..msg.chat_id)
  LuaTele.sendText(msg_chat_id,msg_id,'⌔︙تم تعطيل المسح التلقائي للميديا')
 return false
 end 
@@ -3722,7 +3722,7 @@ if text == "تفعيل المسح التلقائي" then
 if not msg.Originators then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⌔︙هذا الامر يخص { '..Controller_Num(5)..' }* ',"md",true)  
 end
-Redis:set(LKJHG.."SAKURA:Status:Del:Media"..msg.chat_id,true)
+Redis:set(LKJHG.."LKJHG:Status:Del:Media"..msg.chat_id,true)
 LuaTele.sendText(msg_chat_id,msg_id,'⌔︙تم تفعيل المسح التلقائي للميديا')
 return false
 end 
@@ -3768,10 +3768,10 @@ end
 if Controllerbanall(msg_chat_id,UserId_Info.id) == true then 
 return LuaTele.sendText(msg_chat_id,msg_id,"\n*⌔︙عذرآ لا تستطيع استخدام الامر على { "..Controller(msg_chat_id,UserId_Info.id).." } *","md",true)  
 end
-if Redis:sismember(LKJHG.."SAKURA:KtmAll:Groups",UserId_Info.id) then
+if Redis:sismember(LKJHG.."LKJHG:KtmAll:Groups",UserId_Info.id) then
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId_Info.id," ⌔︙تم كتمه عام من المجموعات مسبقا ").Reply,"md",true)  
 else
-Redis:sadd(LKJHG.."SAKURA:KtmAll:Groups",UserId_Info.id) 
+Redis:sadd(LKJHG.."LKJHG:KtmAll:Groups",UserId_Info.id) 
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId_Info.id," ⌔︙تم كتمه عام من المجموعات ").Reply,"md",true)  
 end
 end
@@ -3790,10 +3790,10 @@ end
 if UserName and UserName:match('(%S+)[Bb][Oo][Tt]') then
 return LuaTele.sendText(msg_chat_id,msg_id,"\n⌔︙عذرآ لا تستطيع استخدام معرف البوت ","md",true)  
 end
-if not Redis:sismember(LKJHG.."SAKURA:KtmAll:Groups",UserId_Info.id) then
+if not Redis:sismember(LKJHG.."LKJHG:KtmAll:Groups",UserId_Info.id) then
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId_Info.id," ⌔︙تم الغاء كتمه عام من المجموعات مسبقا ").Reply,"md",true)  
 else
-Redis:srem(LKJHG.."SAKURA:KtmAll:Groups",UserId_Info.id) 
+Redis:srem(LKJHG.."LKJHG:KtmAll:Groups",UserId_Info.id) 
 LuaTele.setChatMemberStatus(msg.chat_id,UserId_Info.id,'restricted',{1,1,1,1,1,1,1,1,1})
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId_Info.id," ⌔︙تم الغاء كتمه عام من المجموعات  ").Reply,"md",true)  
 end
@@ -3814,10 +3814,10 @@ end
 if Controllerbanall(msg_chat_id,Message_Reply.sender.user_id) == true then 
 return LuaTele.sendText(msg_chat_id,msg_id,"\n*⌔︙عذرآ لا تستطيع استخدام الامر على { "..Controller(msg_chat_id,Message_Reply.sender.user_id).." } *","md",true)  
 end
-if Redis:sismember(LKJHG.."SAKURA:KtmAll:Groups",Message_Reply.sender.user_id) then
+if Redis:sismember(LKJHG.."LKJHG:KtmAll:Groups",Message_Reply.sender.user_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender.user_id," ⌔︙تم كتمه عام من المجموعات مسبقا ").Reply,"md",true)  
 else
-Redis:sadd(LKJHG.."SAKURA:KtmAll:Groups",Message_Reply.sender.user_id) 
+Redis:sadd(LKJHG.."LKJHG:KtmAll:Groups",Message_Reply.sender.user_id) 
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender.user_id," ⌔︙تم كتمه عام من المجموعات ").Reply,"md",true)  
 end
 end
@@ -3833,10 +3833,10 @@ end
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
 return LuaTele.sendText(msg_chat_id,msg_id,"\n⌔︙عذرآ لا تستطيع استخدام الامر على البوت ","md",true)  
 end
-if not Redis:sismember(LKJHG.."SAKURA:KtmAll:Groups",Message_Reply.sender.user_id) then
+if not Redis:sismember(LKJHG.."LKJHG:KtmAll:Groups",Message_Reply.sender.user_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender.user_id," ⌔︙تم الغاء كتمه عام من المجموعات مسبقا ").Reply,"md",true)  
 else
-Redis:srem(LKJHG.."SAKURA:KtmAll:Groups",Message_Reply.sender.user_id) 
+Redis:srem(LKJHG.."LKJHG:KtmAll:Groups",Message_Reply.sender.user_id) 
 LuaTele.setChatMemberStatus(msg.chat_id,Message_Reply.sender.user_id,'restricted',{1,1,1,1,1,1,1,1,1})
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender.user_id," ⌔︙تم الغاء كتمه عام من المجموعات  ").Reply,"md",true)  
 end
@@ -3853,10 +3853,10 @@ end
 if Controllerbanall(msg_chat_id,UserId) == true then 
 return LuaTele.sendText(msg_chat_id,msg_id,"\n*⌔︙عذرآ لا تستطيع استخدام الامر على { "..Controller(msg_chat_id,UserId).." } *","md",true)  
 end
-if Redis:sismember(LKJHG.."SAKURA:KtmAll:Groups",UserId) then
+if Redis:sismember(LKJHG.."LKJHG:KtmAll:Groups",UserId) then
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId," ⌔︙تم كتمه عام من المجموعات مسبقا ").Reply,"md",true)  
 else
-Redis:sadd(LKJHG.."SAKURA:KtmAll:Groups",UserId) 
+Redis:sadd(LKJHG.."LKJHG:KtmAll:Groups",UserId) 
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId," ⌔︙تم كتمه عام من المجموعات ").Reply,"md",true)  
 end
 end
@@ -3869,10 +3869,10 @@ local UserInfo = LuaTele.getUser(UserId)
 if UserInfo.luatele == "error" and UserInfo.code == 6 then
 return LuaTele.sendText(msg_chat_id,msg_id,"\n⌔︙عذرآ لا تستطيع استخدام ايدي خطأ ","md",true)  
 end
-if not Redis:sismember(LKJHG.."SAKURA:KtmAll:Groups",UserId) then
+if not Redis:sismember(LKJHG.."LKJHG:KtmAll:Groups",UserId) then
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId," ⌔︙تم الغاء كتمه عام من المجموعات مسبقا ").Reply,"md",true)  
 else
-Redis:srem(LKJHG.."SAKURA:KtmAll:Groups",UserId) 
+Redis:srem(LKJHG.."LKJHG:KtmAll:Groups",UserId) 
 LuaTele.setChatMemberStatus(msg.chat_id,UserId,'restricted',{1,1,1,1,1,1,1,1,1})
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId," ⌔︙تم الغاء كتمه عام من المجموعات  ").Reply,"md",true)  
 end
@@ -3881,18 +3881,18 @@ if text == 'مسح المكتومين عام' then
 if not msg.DevelopersQ then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⌔︙هذا الامر يخص { '..Controller_Num(2)..' }* ',"md",true)  
 end
-local Info_Members = Redis:smembers(LKJHG.."SAKURA:KtmAll:Groups") 
+local Info_Members = Redis:smembers(LKJHG.."LKJHG:KtmAll:Groups") 
 if #Info_Members == 0 then
 return LuaTele.sendText(msg_chat_id,msg_id," ⌔︙لا يوجد مكتومين عام حاليا , ","md",true)  
 end
-Redis:del(LKJHG.."SAKURA:KtmAll:Groups") 
+Redis:del(LKJHG.."LKJHG:KtmAll:Groups") 
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⌔︙تم مسح {"..#Info_Members.."} من المكتومين عام *","md",true)
 end
 if text == 'المكتومين عام' or text == 'قائمه المكتومين عام' then
 if not msg.DevelopersQ then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⌔︙هذا الامر يخص { '..Controller_Num(2)..' }* ',"md",true)  
 end
-local Info_Members = Redis:smembers(LKJHG.."SAKURA:KtmAll:Groups") 
+local Info_Members = Redis:smembers(LKJHG.."LKJHG:KtmAll:Groups") 
 if #Info_Members == 0 then
 return LuaTele.sendText(msg_chat_id,msg_id," ⌔︙لا يوجد مكتومين عام حاليا , ","md",true)  
 end
@@ -7495,7 +7495,7 @@ if ChannelJoin(msg) == false then
 local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = ''..Redis:get(LKJHG..'LKJHG:Channel:Join:Name')..'', url = 't.me/'..Redis:get(LKJHG..'LKJHG:Channel:Join')}, },}}
 return LuaTele.sendText(msg.chat_id,msg.id,'*\n⌔︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
-Redis:setex(LKJHG.."SAKURA:Welcome:Group" .. msg_chat_id .. "" .. msg.sender.user_id, 120, true)  
+Redis:setex(LKJHG.."LKJHG:Welcome:Group" .. msg_chat_id .. "" .. msg.sender.user_id, 120, true)  
 return LuaTele.sendText(msg_chat_id,msg_id,"⌔︙ارسل لي الترحيب الان".."\n⌔︙تستطيع اضافة مايلي !\n⌔︙دالة عرض الاسم »{`name`}\n⌔︙دالة عرض المعرف »{`user`}\n⌔︙دالة عرض اسم المجموعه »{`NameCh`}","md",true)   
 end
 if text == "الترحيب" then 
@@ -7926,7 +7926,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9255,13 +9255,13 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'Channel Source ،', url = 'https://t.me/SAKURAV15'}, 
+{text = 'Channel Source ،', url = 'https://t.me/vvcc7'}, 
 },
 {
-{text = 'Annotations Source', url = 'https://t.me/SAKURAV15'}, 
+{text = 'Annotations Source', url = 'https://t.me/vvcc7'}, 
 },
 {
-{text = 'Communication Source', url = 't.me/SAKURAV15'}, 
+{text = 'Communication Source', url = 't.me/vvcc7'}, 
 },
 {
 {text = 'Developer Source !', url = 't.me/KKKBK'}, 
@@ -9269,7 +9269,7 @@ data = {
 }
 }
 return LuaTele.sendText(msg_chat_id,msg_id, [[
-*⌔︙Source SAKURA *
+*⌔︙Source LKJHG *
 ••┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉••
 ]],"md",false, false, false, false, reply_markup)
 elseif text == 'الاوامر' then
@@ -9296,7 +9296,7 @@ data = {
 {text = '{ اوامر القفل / الفتح }', data = msg.sender.user_id..'/NoNextSeting'}, {text = '{ اوامر التعطيل / التفعيل }', data = msg.sender.user_id..'/listallAddorrem'}, 
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9324,7 +9324,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9344,7 +9344,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9364,7 +9364,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9384,7 +9384,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9404,7 +9404,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9424,7 +9424,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9444,7 +9444,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9461,7 +9461,7 @@ end
 print('Chat Id : '..msg_chat_id)
 print('User Id : '..msg_user_send_id)
 LuaTele.sendText(msg_chat_id,msg_id, "⌔︙ تم تحديث الملفات ♻","md",true)
-dofile('SAKURA.lua')  
+dofile('LKJHG.lua')  
 end
 if text == "تغير اسم البوت" then 
 if not msg.ControllerBot then 
@@ -9485,8 +9485,8 @@ end
 Redis:del(LKJHG.."LKJHG:Name:Bot") 
 return LuaTele.sendText(msg_chat_id,msg_id,"⌔︙تم حذف اسم البوت ","md",true)   
 end
-if text == (Redis:get(LKJHG.."LKJHG:Name:Bot") or "SAKURA") then
-local NamesBot = (Redis:get(LKJHG.."LKJHG:Name:Bot") or "SAKURA")
+if text == (Redis:get(LKJHG.."LKJHG:Name:Bot") or "LKJHG") then
+local NamesBot = (Redis:get(LKJHG.."LKJHG:Name:Bot") or "LKJHG")
 local NameBots = {
 "عمر "..NamesBot.. " شتريد؟",
 "أჂ̤ أჂ̤ هياتني اني",
@@ -9498,7 +9498,7 @@ local NameBots = {
 return LuaTele.sendText(msg_chat_id,msg_id, NameBots[math.random(#NameBots)],"md",true)  
 end
 if text == "بوت" then
-local NamesBot = (Redis:get(LKJHG.."LKJHG:Name:Bot") or "SAKURA")
+local NamesBot = (Redis:get(LKJHG.."LKJHG:Name:Bot") or "LKJHG")
 local BotName = {
 "باوع لك خليني احبك وصيحلي باسمي "..NamesBot,
 "لتخليني ارجع لحركاتي لقديمه وردا ترا اسمي "..NamesBot.. ""
@@ -9613,7 +9613,7 @@ end
 
 if text == "سمايلات" or text == "سمايل" then
 if Redis:get(LKJHG.."LKJHG:Status:Games"..msg.chat_id) then
-Random = {"🍏","🍎","🍐","🍊","🍋","🍉","🍇","🍓","🍈","🍒","🍑","🍍","🥥","🥝","🍅","🍆","🥑","🥦","🥒","🌶","🌽","🥕","🥔","🥖","🥐","🍞","🥨","🍟","🧀","🥚","🍳","🥓","🥩","🍗","🍖","🌭","🍔","🍠","🍕","🥪","🥙","☕️","🥤","🍶","🍺","🍻","🏀","⚽️","🏈","⚾️","🎾","🏐","🏉","🎱","🏓","🏸","🥅","🎰","🎮","🎳","🎯","🎲","🎻","🎸","🎺","🥁","🎹","🎼","🎧","🎤","🎬","🎨","🎭","🎪","🎟","🎫","🎗","🏵","🎖","🏆","🥌","🛷","🚗","🚌","🏎","🚓","🚑","🚚","🚛","🚜","⚔","🛡","🔮","🌡","💣","⌔","📍","📓","📗","📂","📅","📪","📫","⌔","📭","⏰","📺","🎚","☎️","📡"}
+Random = {"🍏","🍎","🍐","🍊","🍋","??","🍇","🍓","🍈","🍒","🍑","🍍","🥥","🥝","🍅","🍆","🥑","🥦","🥒","🌶","🌽","🥕","🥔","🥖","🥐","🍞","🥨","🍟","🧀","🥚","🍳","🥓","🥩","🍗","🍖","🌭","🍔","🍠","🍕","🥪","🥙","☕️","🥤","🍶","🍺","🍻","🏀","⚽️","🏈","⚾️","🎾","🏐","🏉","🎱","🏓","🏸","🥅","🎰","🎮","🎳","🎯","🎲","🎻","🎸","🎺","🥁","🎹","🎼","🎧","🎤","🎬","🎨","🎭","🎪","🎟","🎫","🎗","🏵","🎖","🏆","🥌","🛷","🚗","🚌","🏎","🚓","🚑","🚚","🚛","🚜","⚔","🛡","🔮","🌡","💣","⌔","📍","📓","📗","📂","📅","📪","📫","⌔","📭","⏰","📺","🎚","☎️","📡"}
 SM = Random[math.random(#Random)]
 Redis:set(LKJHG.."LKJHG:Game:Smile"..msg.chat_id,SM)
 return LuaTele.sendText(msg_chat_id,msg_id,"⌔︙اسرع واحد يدز هاذا السمايل ? ~ {`"..SM.."`}","md",true)  
@@ -9974,13 +9974,13 @@ end
 print('Chat Id : '..msg_chat_id)
 print('User Id : '..msg_user_send_id)
 LuaTele.sendText(msg_chat_id,msg_id, "⌔︙ تم تحديث الملفات ♻","md",true)
-dofile('SAKURA.lua')  
+dofile('LKJHG.lua')  
 end
 if text == '/start' then
 Redis:sadd(LKJHG..'LKJHG:Num:User:Pv',msg.sender.user_id)  
 if not msg.ControllerBot then
 if not Redis:get(LKJHG.."LKJHG:Start:Bot") then
-local CmdStart = '*\n⌔︙أهلآ بك في بوت '..(Redis:get(LKJHG.."LKJHG:Name:Bot") or "SAKURA")..
+local CmdStart = '*\n⌔︙أهلآ بك في بوت '..(Redis:get(LKJHG.."LKJHG:Name:Bot") or "LKJHG")..
 '\n⌔︙اختصاص البوت حماية المجموعات'..
 '\n⌔︙لتفعيل البوت عليك اتباع مايلي ...'..
 '\n⌔︙اضف البوت الى مجموعتك'..
@@ -9994,7 +9994,7 @@ data = {
 {text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -10007,7 +10007,7 @@ data = {
 {text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -10820,7 +10820,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -10878,7 +10878,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -10937,7 +10937,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -10990,7 +10990,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -11030,7 +11030,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -11085,7 +11085,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -11129,7 +11129,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -11188,7 +11188,7 @@ data = {
 {text = '{ اوامر القفل / الفتح }', data = IdUser..'/NoNextSeting'}, {text = '{ اوامر التعطيل / التفعيل }', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = 'قناه السورس', url = 't.me/SAKURAV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
