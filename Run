@@ -1,5 +1,5 @@
 cd $(cd $(dirname $0); pwd)
 while(true) do
-screen -S SAKURA -X kill
-screen -S SAKURA ./SAKURA
+screen -S LKJHG -X kill
+screen -S LKJHG ./LKJHG
 done
