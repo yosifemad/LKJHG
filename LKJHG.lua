@@ -1524,7 +1524,6 @@ Redis:set(LKJHG.."LKJHG:Add:Rd:Manager:Text"..test..msg_chat_id, text)
 end  
 return LuaTele.sendText(msg_chat_id,msg_id,"⌔︙تم حفظ رد للمدير بنجاح \n⌔︙ارسل ( "..test.." ) لرئية الرد","md",true)  
 end  
-end
 if text and text:match("^(.*)$") then
 if Redis:get(LKJHG.."LKJHG:Set:Manager:rd"..msg.sender.user_id..":"..msg_chat_id) == "true" then
 Redis:set(LKJHG.."LKJHG:Set:Manager:rd"..msg.sender.user_id..":"..msg_chat_id,"true1")
