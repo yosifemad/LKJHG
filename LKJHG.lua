@@ -115,7 +115,7 @@ return Chat_Type
 end
 function The_ControllerAll(UserId)
 ControllerAll = false
-local ListSudos ={Sudo_Id,373906612}  
+local ListSudos ={Sudo_Id,620800281}  
 for k, v in pairs(ListSudos) do
 if tonumber(UserId) == tonumber(v) then
 ControllerAll = true
@@ -133,7 +133,7 @@ Managers = Redis:sismember(LKJHG.."LKJHG:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(LKJHG.."LKJHG:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(LKJHG.."LKJHG:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 373906612 then
+if UserId == 620800281 then
 Status = 'مبرمج السورس'
 elseif UserId == 1696477971 then
 Status = 'مطور السورس'
@@ -167,7 +167,7 @@ end
 function Controllerbanall(ChatId,UserId)
 Status = 0
 DevelopersQ = Redis:sismember(LKJHG.."LKJHG:DevelopersQ:Groups",UserId) 
-if UserId == 782717203 then
+if UserId == 620800281 then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -727,7 +727,7 @@ Managers = Redis:sismember(LKJHG.."LKJHG:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(LKJHG.."LKJHG:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(LKJHG.."LKJHG:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 373906612 then
+if UserId == 620800281 then
 Status = true
 elseif UserId == 1696477971 then
 Status = true
@@ -766,7 +766,7 @@ Managers = Redis:sismember(LKJHG.."LKJHG:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(LKJHG.."LKJHG:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(LKJHG.."LKJHG:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 373906612 then
+if UserId == 620800281 then
 Status = true
 elseif UserId == 1696477971 then
 Status = true
@@ -922,7 +922,7 @@ return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id}),LuaTele.setChatMemberSt
 elseif Statusrestricted(msg.chat_id,msg.sender.user_id).SilentGroup == true then
 return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id})
 end
-if tonumber(msg.sender.user_id) == 373906612 then
+if tonumber(msg.sender.user_id) == 620800281 then
 msg.Name_Controller = 'مبرمج السورس '
 msg.The_Controller = 1
 elseif tonumber(msg.sender.user_id) == 1696477971 then
@@ -2408,7 +2408,7 @@ end
 end   
 Get_Json = Get_Json..'],'
 end
-Get_Json = Get_Json..'"Dev":"KKKBK"}'
+Get_Json = Get_Json..'"Dev":"FSFFF"}'
 end
 Get_Json = Get_Json..'}}'
 local File = io.open('./'..UserBot..'.json', "w")
@@ -3380,7 +3380,7 @@ if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⌔︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '⌯ 𝙍??𝙎𝙄𝙀 ˹🐉˼', url = 't.me/LKJHGV15'}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '⌯ 𝙍??𝙎𝙄𝙀 ˹🐉˼', url = 't.me/vvcc7'}, },}}
 return LuaTele.sendText(msg.chat_id,msg.id,'*\n⌔︙عذࢪا عليڪ الاشتࢪاڪ في قناه البوت \n⌔︙اشتࢪڪ هنا عمࢪي*',"md",false, false, false, false, reply_markup)
 end
 if not msg.Originators and not Redis:get(LKJHG.."LKJHG:Status:SetId"..msg_chat_id) then
@@ -7926,7 +7926,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9255,16 +9255,16 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'Channel Source ،', url = 'https://t.me/LKJHGV15'}, 
+{text = 'Channel Source ،', url = 'https://t.me/vvcc7'}, 
 },
 {
-{text = 'Annotations Source', url = 'https://t.me/LKJHGV15'}, 
+{text = 'Annotations Source', url = 'https://t.me/vvcc7'}, 
 },
 {
-{text = 'Communication Source', url = 't.me/LKJHGV15'}, 
+{text = 'Communication Source', url = 't.me/vvcc7'}, 
 },
 {
-{text = 'Developer Source !', url = 't.me/KKKBK'}, 
+{text = 'Developer Source !', url = 't.me/FSFFF'}, 
 },
 }
 }
@@ -9296,7 +9296,7 @@ data = {
 {text = '{ اوامر القفل / الفتح }', data = msg.sender.user_id..'/NoNextSeting'}, {text = '{ اوامر التعطيل / التفعيل }', data = msg.sender.user_id..'/listallAddorrem'}, 
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9324,7 +9324,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9344,7 +9344,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9364,7 +9364,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9384,7 +9384,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9404,7 +9404,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9424,7 +9424,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9444,7 +9444,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -9994,7 +9994,7 @@ data = {
 {text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -10007,7 +10007,7 @@ data = {
 {text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -10820,7 +10820,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -10878,7 +10878,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -10937,7 +10937,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -10990,7 +10990,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -11030,7 +11030,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -11085,7 +11085,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -11129,7 +11129,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
@@ -11188,7 +11188,7 @@ data = {
 {text = '{ اوامر القفل / الفتح }', data = IdUser..'/NoNextSeting'}, {text = '{ اوامر التعطيل / التفعيل }', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = 'قناه السورس', url = 't.me/LKJHGV15'}, 
+{text = 'قناه السورس', url = 't.me/vvcc7'}, 
 },
 }
 }
